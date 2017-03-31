@@ -1,0 +1,14 @@
+
+ <div id="map"></div>
+
+ <div id='coordinates'>
+   <%=form_tag(root_path, method: :get, remote: true, id: "click") do%>
+     <%=text_field_tag 'lat', '', id: 'lat' %>
+     <%=text_field_tag 'lng', '', id: 'lng' %>
+   <%end%>
+ </div>
+
+ <div id="result">
+
+
+ </div>

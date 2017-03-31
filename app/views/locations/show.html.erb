@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @location.longitude %>
+</p>
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@location.latitude},#{@location.longitude}&markers=#{@location.latitude},#{@location.longitude}&zoom=12&size=640x400&key= AIzaSyDd7h-Ke7WMYJmc_yG-X0v5k_dHFJnpLAM ",
+              class: 'img-fluid img-rounded', alt: "#{@location.name} on the map"%>
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
